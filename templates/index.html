@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en-US">
-	<head>
-		<title>CYP</title>
-	</head>
-	<body>
-		{% for post in posts %}
-			<h1>{{ post.title }}</h1>
-			<p>bBy {{ post.author }} on {{ post.date_posted }}</p>
-			<p>{{ post.content }}</p>
-		{% endfor %}
-	</body>
-</html>
+{% extends 'layout.html' %}
+
+{% block title %}Posts{% endblock %}
+
+{% block content %}
+	{% for post in posts %}
+		<h1>{{ post.title }}</h1>
+		<p>By {{ post.author }} on {{ post.date_posted }}</p>
+		<p>{{ post.contents }}</p>
+	{% endfor %}
+{% endblock %}
