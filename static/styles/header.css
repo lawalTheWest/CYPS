@@ -1,5 +1,48 @@
-header {
+.navbar {
     width: 100%;
-    background-color: #FF0000;
+    background-color: white;
     height: 70px;
+    border-bottom: 1px solid #CCCCCC;
+    display: flex;
+    align-items: center;
+    position: auto;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+.logo {
+	/* width: 142px; */
+	width: 60px;
+	/* height: 60px; */
+	height: auto;
+	background: url("../images/logo.png") no-repeat center;
+	padding-left: 20px;
+}
+
+.navbar {
+	align-items: center;
+        justify-content: space-between; /* Align items to the right */
+}
+
+.navbar-list {
+	list-style-type: none; /* Remove default list styling */
+	padding: 0; /* Remove default padding */
+	margin: 0; /* Remove default margin */
+	display: flex; /* Use flexbox to arrange items horizontally */
+	/* align-items: center;
+	justify-content: space-between; * Align items to the right */
+}
+
+.navbar-item {
+	margin-right: 10px; /* Add spacing between navbar items */
+}
+
+.navbar-item:last-child {
+	margin-right: 0; /* Remove margin from the last navbar item */
+}
+
+.navbar-item a {
+	color: black; /* Navbar item text color */
+	text-decoration: none; /* Remove underline from links */
+	padding: 10px; /* Add padding to make clickable area larger */
 }
