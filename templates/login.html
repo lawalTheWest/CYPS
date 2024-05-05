@@ -1,7 +1,26 @@
 {% extends 'layout.html' %}
 
-{% block title %}Posts{% endblock %}
+{% block title %}Log In{% endblock %}
+{% block head %}
+	{{ super() }}
+	<link rel="stylesheet" href="{{ url_for('static', filename='styles/login.css') }}">	
+{% endblock %}
 
 {% block content %}
-        <h1>Log in</h1>
+<div class="login-container">
+	<div class="login-box">
+		<h2>Login</h2>
+		<form action="#" method="POST">
+			<div class="form-group">
+				<label for="username">Username</label>
+				<input type="text" id="username" name="username" required>
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" required>
+			</div>
+			<button type="submit">Login</button>
+		</form>
+	</div>
+</div>
 {% endblock %}
