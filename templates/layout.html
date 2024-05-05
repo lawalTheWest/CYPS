@@ -8,6 +8,15 @@
         </head>
         <body>
 		<header>
+			<nav class='navbar'>
+				<img src="{{ url_for('static', filename='images/icon.png') }}" alt="Logo" class='logo'>
+				<ul class='navbar-list'>
+					<li class='navbar-item'><a href="/home">Home</a></li>
+					<li class='navbar-item'><a href="/about">About</a></li>
+					<li class='navbar-item'><a href="/login">Log In</a></li>
+					<li class='navbar-item'><a href="#">Contact</a></li>
+				</ul>
+			</nav>
 		</header>
                 {% block content %}{% endblock %}
 		<footer>
