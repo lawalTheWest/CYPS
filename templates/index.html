@@ -1,11 +1,8 @@
-{% extends 'layout.html' %}
-
-{% block title %}Posts{% endblock %}
-
+{% extends "layout.html" %}
 {% block content %}
-	{% for post in posts %}
-		<h1>{{ post.title }}</h1>
-		<p>By {{ post.author }} on {{ post.date_posted }}</p>
-		<p>{{ post.contents }}</p>
-	{% endfor %}
+    <section>
+        <h2>Welcome to the Crop Yield Prediction System</h2>
+        <p>Explore detailed information about various crops and learn how to maximize your yield.</p>
+        <a href="{{ url_for('crops_page') }}" class="btn">Explore Crops</a>
+    </section>
 {% endblock %}

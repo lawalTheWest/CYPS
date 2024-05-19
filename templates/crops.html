@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block content %}
+    <section>
+        <label for="cropDropdown">Select a crop:</label>
+        <select id="cropDropdown" onchange="navigateToCrop()">
+            <option value="">--Select--</option>
+            {% for key, crop in crops.items() %}
+                <option value="{{ key }}">{{ crop.name }}</option>
+            {% endfor %}
+        </select>
+    </section>
+    <script>
+        function navigateToCrop() {
+            var selectedCrop = document.getElementById('cropDropdown').value;
+            if (selectedCrop) {
+                window.location.href = "/crops/" + selectedCrop;
+            }
+        }
+    </script>
+{% endblock %}

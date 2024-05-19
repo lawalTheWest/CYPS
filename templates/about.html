@@ -1,25 +1,21 @@
-{% extends 'layout.html' %}
-
-{% block title %}About Us - Cybersforth_X{% endblock %}
-
-{% block head %}
-	{{ super() }}
-	<link rel="stylesheet" href="{{ url_for('static', filename='styles/about.css') }}">
-{% endblock %}
-
+{% extends "layout.html" %}
 {% block content %}
-<div class="content">
-	<section class="about-section">
-		<h2>About Cybersforth_X</h2>
-		<p>At Cybersforth_X, we are dedicated to leveraging cutting-edge technology to revolutionize agriculture and address global food security challenges. Our journey began with a vision to empower farmers with advanced AI-driven solutions that optimize crop production, enhance sustainability, and improve livelihoods.</br>Driven by our commitment to innovation and excellence, we specialize in developing tailored AI solutions for precision agriculture, crop yield prediction, and farm management. Through the seamless integration of data science, machine learning, and agronomic expertise, we deliver actionable insights that empower farmers to make informed decisions and maximize yields while minimizing environmental impact.</p>
-	</section>
-	<section class="team-section">
-		<h2>Our Team</h2>
-		<p>At the heart of Cybersforth_X is our dedicated team of experts, united by a shared passion for innovation and agriculture. From data scientists and software engineers to agronomists and domain specialists, each member brings a unique perspective and skill set to our collaborative efforts.</br>Together, we are committed to pushing the boundaries of agricultural innovation, driving positive change in the industry, and creating a brighter future for farming communities worldwide.</p>
-	</section>
-	<section class="mission-section">
-		<h2>Our Mission</h2>
-		<p>Our mission at Cybersforth_X is to harness the power of technology to transform agriculture into a more sustainable, efficient, and resilient industry. We strive to bridge the gap between traditional farming practices and modern technology, democratizing access to advanced agricultural tools and knowledge.</p>
-	</section>
-</div>
+    <section>
+        <h2>Our Mission</h2>
+        <p>To empower farmers with accurate crop yield predictions to enhance food production and sustainability.</p>
+    </section>
+    <section>
+        <h2>Meet the Team</h2>
+        <p>Our team consists of experts in agriculture, data science, and software development.</p>
+        <ul>
+            <li>John Doe - Agricultural Scientist</li>
+            <li>Jane Smith - Data Scientist</li>
+            <li>Emily Johnson - Software Engineer</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Contact Us</h2>
+        <p>Email: support@cropyield.com</p>
+        <p>Phone: +123-456-7890</p>
+    </section>
 {% endblock %}
