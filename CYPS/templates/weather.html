@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h2>Weather Forecast and Yield Prediction</h2>
+    <p><strong>Location:</strong> {{ location.city }}, {{ location.region }}, {{ location.country }}</p>
+    <p><strong>Temperature:</strong> {{ weather.temperature }}°C</p>
+    <p><strong>Humidity:</strong> {{ weather.humidity }}%</p>
+    <p><strong>Weather:</strong> {{ weather.weather }}</p>
+    <h3>Yield Prediction</h3>
+    <p>{{ yield_prediction }}</p>
+{% endblock %}
