@@ -1,20 +1,32 @@
 {% extends "layout.html" %}
 {% block content %}
-    <section>
-        <label for="cropDropdown">Select a crop:</label>
-        <select id="cropDropdown" onchange="navigateToCrop()">
-            <option value="">--Select--</option>
-            {% for key, crop in crops.items() %}
-                <option value="{{ key }}">{{ crop.name }}</option>
-            {% endfor %}
-        </select>
-    </section>
-    <script>
-        function navigateToCrop() {
-            var selectedCrop = document.getElementById('cropDropdown').value;
-            if (selectedCrop) {
-                window.location.href = "/crops/" + selectedCrop;
-            }
-        }
-    </script>
+<section>
+	<h2>About {{ crop.name }}</h2>
+	<p>{{ crop.about }}</p>
+</section>
+<section>
+	<h2>Species</h2>
+	<p>{{ crop.species }}</p>
+</section>
+<section>
+	<h2>Type</h2>
+	<p>{{ crop.type }}</p>
+</section>
+<section>
+	<h2>Optimum Conditions for Plantation</h2>
+	<p>{{ crop.optimum_plantation }}</p>
+</section>
+<section>
+	<h2>Optimum Conditions for Storage</h2>
+	<p>{{ crop.optimum_storage }}</p>
+</section>
+<section>
+	<h2>Best Soil Type and pH for Planting</h2>
+	<p>{{ crop.soil_type }}</p>
+</section>
+<section>
+	<h2>Potential Yield per Hectare</h2>
+	<p>{{ crop.yield_per_hectare }}</p>
+</section>
 {% endblock %}
+

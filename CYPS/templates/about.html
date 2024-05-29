@@ -1,21 +1,38 @@
 {% extends "layout.html" %}
+{% block title %}About Us - Crop Yield Prediction System{% endblock %}
+{% block extra_head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+{% endblock %}
 {% block content %}
-    <section>
-        <h2>Our Mission</h2>
-        <p>To empower farmers with accurate crop yield predictions to enhance food production and sustainability.</p>
-    </section>
-    <section>
-        <h2>Meet the Team</h2>
-        <p>Our team consists of experts in agriculture, data science, and software development.</p>
-        <ul>
-            <li>John Doe - Agricultural Scientist</li>
-            <li>Jane Smith - Data Scientist</li>
-            <li>Emily Johnson - Software Engineer</li>
-        </ul>
-    </section>
-    <section>
-        <h2>Contact Us</h2>
-        <p>Email: support@cropyield.com</p>
-        <p>Phone: +123-456-7890</p>
-    </section>
+<section>
+    <h2>Our Mission</h2>
+    <p>To empower farmers with accurate crop yield predictions to enhance food production and sustainability.</p>
+</section>
+<section>
+    <h2>Meet the Team</h2>
+    <p>Our team consists of experts in agriculture, data science, and software development.</p>
+    <ul class="team-list">
+        <li class="team-box">
+            <img src="{{ url_for('static', filename='images/lawal.jpg') }}" alt="Lawal Tajudeen Ogunsola" class="team-photo">
+	    <p>
+	    <b>Lawal Tajudeen Ogunsola</b><br/>
+	    <i>Software Engineer</i><br/>
+	    <a href="https://github.com/lawalTheWest/">Github</a><br/>
+	    <a href="https://www.linkedin.com/in/lawal-tajudeen-4927ab240/">LinkedIn</a>
+	    </p>
+        </li>
+	<!--
+        <li class="team-box">
+            <img src="{{ url_for('static', filename='images/david.jpg') }}" alt="Adedeji David" class="team-photo">
+            <p>Adedeji David - UI/UX Engineer</p>
+        </li>
+	-->
+        <!-- Add more team members here -->
+    </ul>
+</section>
+<section>
+    <h2>Contact Us</h2>
+    <p>Email: lwltjdn@gmail.com</p>
+    <p>Phone: +234-816-892-2753</p>
+</section>
 {% endblock %}
