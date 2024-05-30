@@ -1,8 +1,10 @@
 # app/routes.py
 
 from flask import current_app as app
-from flask import render_template, request
+from flask import render_template, request, Blueprint
 from .crops import crops
+
+main_bp = Blueprint('main', __name__)
 
 @app.route('/')
 @app.route('/home')

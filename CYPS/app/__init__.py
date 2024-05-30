@@ -1,11 +1,16 @@
 # app/__init__.py
+
 import os
-from flask import Flask, render_template
+from config import DevelopmentConfig # importing the appropriate config class
+from flask import Flask
 
 template_dir = os.path.abspath('path/to/custom_templates')
 
-def create_app():
-    app = Flask(__name__)
+def create_app(config_class=DevelopmentConfig):
+    app = Flask(__name__,
+                template_folder=config_class.TEMPLATES_DIR,
+                static_folder=config_class.STATIC_DIR)
+    app.config.from_object(config_class)
 
     with app.app_context():
         # Imports parts of the application
