@@ -1,6 +1,8 @@
 # app/__init__.py
+import os
+from flask import Flask, render_template
 
-from flask import Flask
+template_dir = os.path.abspath('path/to/custom_templates')
 
 def create_app():
     app = Flask(__name__)
