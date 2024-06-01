@@ -23,7 +23,7 @@ The Crop Yield Prediction System (CYPS) is a web application designed to provide
 ### Steps
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/your-username/crop-yield-prediction.git
+    git clone https://github.com/lawalTheWest/_CYPS_.git
     cd crop-yield-prediction
     ```
 
