@@ -1,11 +1,38 @@
 {% extends "layout.html" %}
 {% block content %}
 <section>
-	<h2>Crops List</h2>
-	<ul>
-		{% for crop_name, crop_details in crops.items() %}
-		<li><a href="{{ url_for('crop_detail', crop_name=crop_name) }}">{{ crop_name }}</a></li>
-		{% endfor %}
-	</ul>
+    <h2>Select a Crop</h2>
+    <form id="crop-form">
+        <label for="crop-select">Choose a crop:</label>
+        <select id="crop-select" name="crop">
+            <option value="">--Select a crop--</option>
+            {% for crop_name in crops.keys() %}
+                <option value="{{ crop_name }}">{{ crop_name }}</option>
+            {% endfor %}
+        </select>
+    </form>
 </section>
 {% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("JavaScript file loaded");
+
+    const cropSelect = document.getElementById('crop-select');
+    if (cropSelect) {
+        console.log("Dropdown element found");
+        cropSelect.addEventListener('change', function() {
+            console.log("Dropdown changed");
+            if (this.value) {
+                console.log("Selected value:", this.value);
+                window.location.href = "/crops/" + this.value;
+            }
+        });
+    } else {
+        console.log("Dropdown element not found");
+    }
+});
+</script>
+{% endblock %}
+
