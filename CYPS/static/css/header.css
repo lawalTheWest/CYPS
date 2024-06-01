@@ -1,6 +1,6 @@
 /* the header section stylesheet for the base model code */
 header {
-	background-color: #4CAF50;
+	background-color: ##1F8835; /*#4CAF50;*/
 	color: white;
 	padding: 1em 0;
 	text-align: center;
@@ -10,7 +10,7 @@ nav ul {
 	list-style: none;
 	padding: 0;
 }
-
+;
 nav ul li {
 	display: inline;
 	margin: 0 1em;
