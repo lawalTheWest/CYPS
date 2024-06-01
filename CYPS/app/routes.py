@@ -23,7 +23,7 @@ def crops_page():
 def crop_detail(crop_name):
     crop = crops.get(crop_name)
     if crop:
-        return render_template('crop.html', crop=crop)
+        return render_template('crop_detail.html', crop=crop)
     else:
         return render_template('404.html'), 404
 
