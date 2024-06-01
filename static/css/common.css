@@ -1,49 +1,44 @@
+/* The common styleaheet */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+	font-family: Arial, sans-serif;
+	margin: 0;
+	margin-bottom: 60px;
+	padding: 0;
+	background-color: #f4f4f4;
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 1em 0;
-    text-align: center;
+	background-color: #1F8835;
+	color: white;
+	padding: 1em 0;
+	text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 1em;
+	display: inline;
+	margin: 0 1em;
 }
 
 nav ul li a {
-    color: white;
-    text-decoration: none;
+	color: white;
+	text-decoration: none;
 }
 
 main {
-    padding: 2em;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	padding: 2em;
+	max-width: 800px;
+	margin: 0 auto;
+	background-color: white;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 footer {
-    text-align: center;
-    padding: 1em 0;
-    background-color: #4CAF50;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
 }
 
 h1, h2, h3 {

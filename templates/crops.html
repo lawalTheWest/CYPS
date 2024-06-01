@@ -1,20 +1,18 @@
 {% extends "layout.html" %}
 {% block content %}
-    <section>
-        <label for="cropDropdown">Select a crop:</label>
-        <select id="cropDropdown" onchange="navigateToCrop()">
-            <option value="">--Select--</option>
-            {% for key, crop in crops.items() %}
-                <option value="{{ key }}">{{ crop.name }}</option>
+<section>
+    <h2>Select a Crop</h2>
+    <form id="crop-form">
+        <label for="crop-select">Choose a crop:</label>
+        <select id="crop-select" name="crop">
+            <option value="">--Select a crop--</option>
+            {% for crop_name in crops.keys() %}
+                <option value="{{ crop_name }}">{{ crop_name }}</option>
             {% endfor %}
         </select>
-    </section>
-    <script>
-        function navigateToCrop() {
-            var selectedCrop = document.getElementById('cropDropdown').value;
-            if (selectedCrop) {
-                window.location.href = "/crops/" + selectedCrop;
-            }
-        }
-    </script>
+    </form>
+</section>
+{% endblock %}
+
+{% block extra_body %}
 {% endblock %}
