@@ -1,28 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ title }}</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>{% block title %}Crop Yield Prediction System{% endblock %}</title>
+
+	<!-- the css files imported -->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
+
+	<!-- extra contents from the source files to merge this base code -->
+	{% block extra_head %}
+	{% endblock %}
 </head>
 <body>
-    <header>
-        <h1>Crop Yield Prediction System</h1>
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('about') }}">About Us</a></li>
-                <li><a href="{{ url_for('crops_page') }}">Crops</a></li>
-                <li><a href="{{ url_for('blog') }}">Blog</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        {% block content %}{% endblock %}
-    </main>
-    <footer>
-        <p>&copy; 2024 Crop Yield Prediction System</p>
-    </footer>
+	<!-- the header section -->
+	<header>
+		<h1>Crop Yield Prediction System</h1>
+		<!-- menu list -->
+		<nav>
+			<ul>
+				<li><a href="{{ url_for('index') }}">Home</a></li>
+				<li><a href="{{ url_for('about') }}">About Us</a></li>
+				<li><a href="{{ url_for('crops_page') }}">Crops</a></li>
+				<li><a href="{{ url_for('blog') }}">Blog</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- the main body -->
+	<main>
+		{% block content %}{% endblock %}
+	</main>
+
+	<!-- the footer section -->
+	<footer>
+		<p>&copy; 2024 Crop Yield Prediction System</p>
+	</footer>
+
+	<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+	<script src="{{ url_for('static', filename='js/crop_select.js') }}"></script>
+	<!-- The extra body contents such as the script section -->
+	{% block extra_body %}
+	{% endblock %}
 </body>
 </html>
