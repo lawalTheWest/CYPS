@@ -1,11 +1,14 @@
 {% extends "layout.html" %}
 {% block extra_head %}
 <link ref="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+<link ref="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 {% endblock %}
 {% block content %}
 <section>
 	<h2>Welcome to the Crop Yield Prediction System</h2>
 	<p>Explore detailed information about various crops and learn how to maximize your yield.</p>
 	<a href="{{ url_for('crops_page') }}" class="btn">Explore Crops</a>
+	<h3>Weather <i>loading...</i></h3>
+	<h3>Predict Yield <i>loading...</i></h3>
 </section>
 {% endblock %}
