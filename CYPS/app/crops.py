@@ -1,6 +1,7 @@
 # app/crops.py
 
 crops = {
+        # The Wheat
         "wheat": {
             "scientific_name": "Triticum spp.",
             "description": "Wheat is a cereal grain originally from the Levant region of the Near East and Ethiopian Highlands. It is now cultivated worldwide.",
@@ -16,8 +17,11 @@ crops = {
                 "temperature": "15-25°C (59-77°F)",
                 "rainfall": "300-900 mm",
                 "soil": "Loamy soil with good drainage"
-                }
+                },
+            "image": "wheat.jpg" # updated this line of code to include the images
             },
+
+        # The Corn
         "corn": {
             "scientific_name": "Zea mays",
             "description": "Corn, also known as maize, is a cereal grain first domesticated by indigenous peoples in southern Mexico about 10,000 years ago.",
@@ -34,7 +38,10 @@ crops = {
                 "rainfall": "400-800 mm",
                 "soil": "Well-drained, fertile soil"
                 }
+            "image": "corn.jpg"
             },
+
+        # The Rice
         "rice": {
             "scientific_name": "Oryza sativa",
             "description": "Rice is a staple food for over half of the world's population. It is a cereal grain that is cultivated worldwide.",
@@ -51,7 +58,10 @@ crops = {
                 "rainfall": "1200-1500 mm",
                 "soil": "Heavy soils with good water retention"
                 }
+            "image": "rice.jpg" # display
             },
+
+        # The Yam
         "yam": {
                 "scientific_name": "Dioscorea spp.",
                 "description": "Yam is a starchy tuber that is an important food crop in many parts of the world.",
@@ -68,7 +78,10 @@ crops = {
                     "rainfall": "1000-1500 mm",
                     "soil": "Well-drained, sandy loam soil"
                     }
+                "image": "yam.jpg" # display 
                 },
+
+        # The Cassava
         "cassava": {
                 "scientific_name": "Manihot esculenta",
                 "description": "Cassava is a root vegetable that is a major source of carbohydrates in tropical regions.",
@@ -85,7 +98,10 @@ crops = {
                     "rainfall": "1000-1500 mm",
                     "soil": "Well-drained, sandy loam or loamy soil"
                     }
+                "image": "cassava.jpg" # The display
                 },
+
+        # The Carrot
         "carrot": {
                 "scientific_name": "Daucus carota",
                 "description": "Carrot is a root vegetable that is commonly consumed worldwide.",
@@ -102,7 +118,10 @@ crops = {
                     "rainfall": "600-800 mm",
                     "soil": "Loose, sandy loam soil with good drainage"
                     }
+                "image": "carrot.jpg" # The carrot display
                 },
+
+        # The tomatoes plant
         "tomatoes": {
                 "scientific_name": "Solanum lycopersicum",
                 "description": "Tomato is a widely cultivated fruit that is used as a vegetable in cooking.",
@@ -119,7 +138,10 @@ crops = {
                     "rainfall": "400-600 mm",
                     "soil": "Well-drained, fertile soil with organic matter"
                     }
+                "image": "tomatoes.jpg" # The tomatoes plant display
                 },
+
+        # The beans plant
         "beans": {
                 "scientific_name": "Phaseolus vulgaris",
                 "description": "Beans are legumes that are widely cultivated for their edible seeds.",
@@ -136,7 +158,10 @@ crops = {
                     "rainfall": "400-600 mm",
                     "soil": "Well-drained, fertile soil with organic matter"
                     }
+                "image": "beans.jpg" # The beans plant
                 },
+
+        # The groundnut plant
         "groundnut": {
                 "scientific_name": "Arachis hypogaea",
                 "description": "Groundnut, also known as peanut, is a legume crop grown mainly for its edible seeds.",
@@ -153,5 +178,7 @@ crops = {
                     "rainfall": "500-1000 mm",
                     "soil": "Light, sandy loam soil with good drainage"
                     }
+                "image": "groundnut.jpg" # the groundnut display
                 }
+        # To increase the crops i could add them in this section...
         }

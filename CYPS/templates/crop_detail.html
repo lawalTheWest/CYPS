@@ -1,34 +1,34 @@
 {% extends "layout.html" %}
 {% block content %}
 <section>
-    <h2>About {{ crop.scientific_name }}</h2>
-    <p>{{ crop.description }}</p>
+	<h2>About {{ crop.scientific_name }}</h2>
+	<img src="{{ url_for('static', filename='images/' ~ crop.image) }}" alt="{{ crop.name }}">
+	<p>{{ crop.description }}</p>
 </section>
 <section>
-    <h2>Uses</h2>
-    <ul>
-        {% for use in crop.uses %}
-            <li>{{ use }}</li>
-        {% endfor %}
-    </ul>
+	<h2>Uses</h2>
+	<ul>
+		{% for use in crop.uses %}
+		<li>{{ use }}</li>
+		{% endfor %}
+	</ul>
 </section>
 <section>
-    <h2>Nutritional Value (per 100g)</h2>
-    <ul>
-        <li>Calories: {{ crop.nutritional_value.calories }}</li>
-        <li>Carbohydrates: {{ crop.nutritional_value.carbohydrates }} g</li>
-        <li>Protein: {{ crop.nutritional_value.protein }} g</li>
-        <li>Fat: {{ crop.nutritional_value.fat }} g</li>
-        <li>Fiber: {{ crop.nutritional_value.fiber }} g</li>
-    </ul>
+	<h2>Nutritional Value (per 100g)</h2>
+	<ul>
+		<li>Calories: {{ crop.nutritional_value.calories }}</li>
+		<li>Carbohydrates: {{ crop.nutritional_value.carbohydrates }} g</li>
+		<li>Protein: {{ crop.nutritional_value.protein }} g</li>
+		<li>Fat: {{ crop.nutritional_value.fat }} g</li>
+		<li>Fiber: {{ crop.nutritional_value.fiber }} g</li>
+	</ul>
 </section>
 <section>
-    <h2>Growing Conditions</h2>
-    <ul>
-        <li>Temperature: {{ crop.growing_conditions.temperature }}</li>
-        <li>Rainfall: {{ crop.growing_conditions.rainfall }}</li>
-        <li>Soil: {{ crop.growing_conditions.soil }}</li>
-    </ul>
+	<h2>Growing Conditions</h2>
+	<ul>
+		<li>Temperature: {{ crop.growing_conditions.temperature }}</li>
+		<li>Rainfall: {{ crop.growing_conditions.rainfall }}</li>
+		<li>Soil: {{ crop.growing_conditions.soil }}</li>
+	</ul>
 </section>
 {% endblock %}
-
