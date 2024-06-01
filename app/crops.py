@@ -37,7 +37,7 @@ crops = {
                 "temperature": "18-27°C (64-81°F)",
                 "rainfall": "400-800 mm",
                 "soil": "Well-drained, fertile soil"
-                }
+                },
             "image": "corn.jpg"
             },
 
@@ -57,7 +57,7 @@ crops = {
                 "temperature": "20-30°C (68-86°F)",
                 "rainfall": "1200-1500 mm",
                 "soil": "Heavy soils with good water retention"
-                }
+                },
             "image": "rice.jpg" # display
             },
 
@@ -77,7 +77,7 @@ crops = {
                     "temperature": "25-30°C (77-86°F)",
                     "rainfall": "1000-1500 mm",
                     "soil": "Well-drained, sandy loam soil"
-                    }
+                    },
                 "image": "yam.jpg" # display 
                 },
 
@@ -97,7 +97,7 @@ crops = {
                     "temperature": "25-29°C (77-84°F)",
                     "rainfall": "1000-1500 mm",
                     "soil": "Well-drained, sandy loam or loamy soil"
-                    }
+                    },
                 "image": "cassava.jpg" # The display
                 },
 
@@ -117,7 +117,7 @@ crops = {
                     "temperature": "16-21°C (60-70°F)",
                     "rainfall": "600-800 mm",
                     "soil": "Loose, sandy loam soil with good drainage"
-                    }
+                    },
                 "image": "carrot.jpg" # The carrot display
                 },
 
@@ -137,7 +137,7 @@ crops = {
                     "temperature": "20-24°C (68-75°F)",
                     "rainfall": "400-600 mm",
                     "soil": "Well-drained, fertile soil with organic matter"
-                    }
+                    },
                 "image": "tomatoes.jpg" # The tomatoes plant display
                 },
 
@@ -157,7 +157,7 @@ crops = {
                     "temperature": "18-24°C (64-75°F)",
                     "rainfall": "400-600 mm",
                     "soil": "Well-drained, fertile soil with organic matter"
-                    }
+                    },
                 "image": "beans.jpg" # The beans plant
                 },
 
@@ -177,7 +177,7 @@ crops = {
                     "temperature": "20-30°C (68-86°F)",
                     "rainfall": "500-1000 mm",
                     "soil": "Light, sandy loam soil with good drainage"
-                    }
+                    },
                 "image": "groundnut.jpg" # the groundnut display
                 }
         # To increase the crops i could add them in this section...
