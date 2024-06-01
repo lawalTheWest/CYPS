@@ -48,6 +48,8 @@ The Crop Yield Prediction System (CYPS) is a web application designed to provide
 
 ## Project Structure
 
+```
+
 CYPS/
 ├── app
 │   ├── api.py
@@ -96,6 +98,7 @@ CYPS/
     ├── README.md
     └── weather.html
 
+```
 
 - **app/**: Contains the application modules and packages.
 	- **api.py**: API endpoints for the application.
