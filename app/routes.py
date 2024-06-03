@@ -21,9 +21,9 @@ def crops_page():
 
 @app.route('/crops/<crop_name>')
 def crop_detail(crop_name):
-    crop = crops.get(crop_name)
-    if crop:
-        return render_template('crop_detail.html', crop=crop)
+    crop_data = crops.get(crop_name)
+    if crop_data:
+        return render_template('crop_detail.html', crop=crop_data)
     else:
         return render_template('404.html'), 404
 
