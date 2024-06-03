@@ -1,34 +1,103 @@
 {% extends "layout.html" %}
+{% block extra_head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/crop_detail.css') }}">
+{% endblock %}
 {% block content %}
 <section>
-	<h2>About {{ crop.scientific_name }}</h2>
-	<img src="{{ url_for('static', filename='images/' ~ crop.image) }}" alt="{{ crop.name }}">
-	<p>{{ crop.description }}</p>
-</section>
-<section>
-	<h2>Uses</h2>
+	<h2>{{ crop['Basic Information']['common name'] }}</h2>
+	<img src="{{ url_for('static', filename='images/' ~ crop_name ~ '/' ~ crop['Basic Information']['image']) }}" alt="{{ crop['Basic Information']['common name'] }}" class="crop-image crop-basic-info-image" loading="lazy">
+	<h3>Basic Information</h3>
 	<ul>
-		{% for use in crop.uses %}
-		<li>{{ use }}</li>
-		{% endfor %}
+		<li><strong>Scientific name:</strong> {{ crop['Basic Information']['Scientific name'] }}</li>
+		<li><strong>Family:</strong> {{ crop['Basic Information']['Family'] }}</li>
+		<li><strong>Origin and History:</strong> {{ crop['Basic Information']['Origin and History'] }}</li>
 	</ul>
-</section>
-<section>
-	<h2>Nutritional Value (per 100g)</h2>
+
+	<h3>Description</h3>
 	<ul>
-		<li>Calories: {{ crop.nutritional_value.calories }}</li>
-		<li>Carbohydrates: {{ crop.nutritional_value.carbohydrates }} g</li>
-		<li>Protein: {{ crop.nutritional_value.protein }} g</li>
-		<li>Fat: {{ crop.nutritional_value.fat }} g</li>
-		<li>Fiber: {{ crop.nutritional_value.fiber }} g</li>
+		<li><strong>Physical characteristics:</strong> {{ crop['description']['Physical characteristics'] }}</li>
+		<li><strong>Varieties:</strong> {{ crop['description']['Varieties'] }}</li>
 	</ul>
-</section>
-<section>
-	<h2>Growing Conditions</h2>
+
+	<h3>Uses</h3>
 	<ul>
-		<li>Temperature: {{ crop.growing_conditions.temperature }}</li>
-		<li>Rainfall: {{ crop.growing_conditions.rainfall }}</li>
-		<li>Soil: {{ crop.growing_conditions.soil }}</li>
+		<li><strong>Human Consumption:</strong> {{ crop['uses']['Human Consumption'] }}</li>
+		<li><strong>Industrial Uses:</strong> {{ crop['uses']['industrial Uses'] }}</li>
+	</ul>
+
+	<h3>Nutritional Value (per 100g)</h3>
+	<ul>
+		<li><strong>Calories:</strong> {{ crop['nutritional_value']['calories'] }} kcal</li>
+		<li><strong>Carbohydrates:</strong> {{ crop['nutritional_value']['carbohydrates'] }} g</li>
+		<li><strong>Protein:</strong> {{ crop['nutritional_value']['protein'] }} g</li>
+		<li><strong>Fat:</strong> {{ crop['nutritional_value']['fat'] }} g</li>
+		<li><strong>Fiber:</strong> {{ crop['nutritional_value']['fiber'] }} g</li>
+	</ul>
+
+
+	<h3>Growing Conditions</h3>
+	<ul>
+		<li><strong>Temperature:</strong> {{ crop['growing_condition']['temperature'] }}</li>
+		<li><strong>Water Content:</strong> {{ crop['growing_condition']['Water content'] }}</li>
+		<li><strong>Soil Type:</strong> {{ crop['growing_condition']['Soil']['Soil Type'] }}</li>
+		<li><strong>Soil pH:</strong> {{ crop['growing_condition']['Soil']['Soil pH'] }}</li>
+	</ul>
+
+	<h3>Cultivation Practices</h3>
+	<img src="{{ url_for('static', filename='images/' ~ crop_name ~ '/' ~ crop['Cultivation practices']['plant_on_farm_image_1']) }}" alt="Planting image" class="crop-image crop-basic-info-image" loading="lazy">
+	<ul>
+		<li><strong>Planting:</strong> {{ crop['Cultivation practices']['Planting'] }}</li>
+		<li><strong>Crop Rotation:</strong> {{ crop['Cultivation practices']['crop_rotation'] }}</li>
+		<li><strong>Pests and Diseases:</strong>
+			<ul>
+				<img src="{{ url_for('static', filename='images/' ~ crop_name ~ '/' ~ crop['Cultivation practices']['pests and diseases']['pest_image']) }}" alt="Pest image" class="crop-image crop-pest-image" loading="lazy">
+				<li><strong>Pests:</strong> {{ crop['Cultivation practices']['pests and diseases']['pests'] | join(', ') }}</li>
+				<img src="{{ url_for('static', filename='images/' ~ crop_name ~ '/' ~ crop['Cultivation practices']['pests and diseases']['image_of_diseased_plant']) }}" alt="Diseased plant image" class="crop-image crop-disease-image" loading="lazy">
+				<li><strong>Diseases:</strong> {{ crop['Cultivation practices']['pests and diseases']['diseases'] | join(', ') }}</li>
+			</ul>
+		</li>
+		<li><strong>Fertilization:</strong> {{ crop['Cultivation practices']['fertilization'] }}</li>
+	</ul>
+
+	<h3>Harvesting and Storage</h3>
+	<ul>
+		<li><strong>Harvesting Condition:</strong> {{ crop['Harvesting_and_storage']['Harvesting Condition'] }}</li>
+		<li><strong>Post-harvesting Handling:</strong> {{ crop['Harvesting_and_storage']['post_harvesting handling'] }}</li>
+		<li><strong>Storage Condition:</strong> {{ crop['Harvesting_and_storage']['Storage_condition'] }}</li>
+	</ul>
+
+	<h3>Yield Information</h3>
+	<ul>
+		<li><strong>Average Yield:</strong> {{ crop['Yield_information']['Average yield'] }}</li>
+		<li><strong>Factors Affecting Yield:</strong> {{ crop['Yield_information']['Factors affecting yield'] | join(', ') }}</li>
+		<li><strong>Yield Prediction Models:</strong> {{ crop['Yield_information']['Yield_prediction_models'] }}</li>
+	</ul>
+
+	<h3>Economic Importance</h3>
+	<ul>
+		<li><strong>Market Demand:</strong> {{ crop['Economic_importance']['Market_demand'] }}</li>
+		<li><strong>Economic Value:</strong> {{ crop['Economic_importance']['Economic_value'] }}</li>
+		<li><strong>Trade:</strong> {{ crop['Economic_importance']['Trade'] }}</li>
+	</ul>
+
+	<h3>Research and Innovation</h3>
+	<ul>
+		<li><strong>Current Research:</strong> {{ crop['Research_innovation']['Current_Research'] }}</li>
+		<li><strong>Breeding Programs:</strong> {{ crop['Research_innovation']['Breeding_programs'] }}</li>
+		<li><strong>Technological Innovation:</strong> {{ crop['Research_innovation']['Technological_innovation'] }}</li>
+	</ul>
+
+	<h3>Environmental Impact</h3>
+	<ul>
+		<li><strong>Sustainability:</strong> {{ crop['Environmental_impact']['Sustainability'] }}</li>
+		<li><strong>Ecological Footprint:</strong> {{ crop['Environmental_impact']['Ecological_Footprint'] }}</li>
+		<li><strong>Conservation:</strong> {{ crop['Environmental_impact']['Conservation'] }}</li>
+	</ul>
+
+	<h3>Case Study</h3>
+	<ul>
+		<li><strong>Successful Cultivation Practices:</strong> {{ crop['Case_study']['Successful cultivation practices'] }}</li>
+		<li><strong>Challenges and Solutions:</strong> {{ crop['Case_study']['Challenges and solutions'] }}</li>
 	</ul>
 </section>
 {% endblock %}
