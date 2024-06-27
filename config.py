@@ -7,9 +7,9 @@ class Config:
     # Add other configuration variables here
 
 class DevelopmentConfig(Config):
-    DEBUG = True
+    DEBUG = False
     # Add other development-specific configurations here
 
 class ProductionConfig(Config):
-    DEBUG = False
+    DEBUG = True
     # Add other production-specific configurations here
